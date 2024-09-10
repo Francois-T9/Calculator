@@ -3,6 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    background-color: black;
 }
 
 .container {
@@ -19,10 +20,11 @@ body {
     padding: 10px;
 }
 
-.container .buttons {
+.container .buttons, .btnAction {
     display: flex;
     flex-wrap: wrap;
 }
+
 
 .container button {
     width: 50px;
