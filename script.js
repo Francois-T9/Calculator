@@ -12,7 +12,13 @@ function multiply(a,b) {
 }
 
 function divide(a,b) {
-    return(a/b);
+    if(b===0) {
+        displayCopy('div by 0');
+    }
+    else {
+        return(a/b);
+    }
+    
 }
 
 function operate(a,b,operator) {
@@ -26,7 +32,12 @@ function operate(a,b,operator) {
         return(multiply(a,b))
     }
     else if(operator=="/") {
+        if(b===0) {
+            return('divide by 0')
+        }
+        else {
         return(divide(a,b))
+        }
     }
     else {
         alert("enter a valid operator")
@@ -86,14 +97,23 @@ document.querySelectorAll("button").forEach(button=> {
 
         }
         else if(this.textContent=="=") {
-            // console.log(displayValue.textContent);
-            a=separateStr(displayValue.textContent)[0];
-            b=separateStr(displayValue.textContent)[1];
+            if(screenValue=='') {
+
+
+            }
+            else {
+                // console.log(displayValue.textContent);
+                a=separateStr(displayValue.textContent)[0];
+                b=separateStr(displayValue.textContent)[1];
+
+                operator=separateStr(displayValue.textContent)[2];
+                let resu=operate(parseInt(a),parseInt(b),operator);
+                // console.log(resu);
+                displayCopy(resu);
+                screenValue=resu;
+            }
+
             
-            operator=separateStr(displayValue.textContent)[2];
-            let resu=operate(parseInt(a),parseInt(b),operator);
-            console.log(resu);
-            displayCopy(resu);
             
         }
         else {
