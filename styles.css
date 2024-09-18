@@ -1,9 +1,18 @@
+:root {
+    --orange: #FF9500;
+    --dark-gray: #505050;
+   
+    --light-gray: #D4D4D2;
+    --black: #1C1C1C;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    background-color: black;
+    background-color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .container {
@@ -14,9 +23,9 @@ body {
     height: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #FBEAE7;
+    background-color: var(--black);
     flex-wrap: wrap;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
     
 }
@@ -51,16 +60,16 @@ body {
 
 
 .myBtn {
-    background-color: #B2456E ;
+    background-color: var(--dark-gray) ;
 }
 
 
 .container button {
     width: 50px;
     height: 50px;
-    border-radius: 20px;
+    /* border-radius: 90px; */
     color: white;
-    font-weight: 1000;
+    /* font-weight: 1000; */
     font-size: 24px;
     
 }
@@ -68,19 +77,19 @@ body {
 
 
 .evalBtn, .clearBtn, .right button {
-    background-color: #552619;
+    background-color: var(--orange);
 }
 
 .container .display {
     display: flex;
     width: 50%;
     height: 25px;
-    background-color: gainsboro;
+    background-color: var(--light-gray);
     margin-bottom: 20px;
     border: 2px solid black;
     justify-content: center;
     align-items: center;
-    color: #B2456E;
-    font-weight: 1000;
+    color: var(--black);
+    /* font-weight: 1000; */
     font-size: 24px;
 }
